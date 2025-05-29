@@ -21,11 +21,11 @@ Please download and setup the package.
   website: https://montecarlo.sourceforge.net/emc/Download.html  
   package: Linux x86_64 (Intel Architecture)  
 
-3. Put the tgz file in EMC_interface/EMC/.
+2. Put the tgz file in EMC_interface/EMC/.
 
-4. Run all cells in extract_EMC.ipynb.
+3. Run all cells in extract_EMC.ipynb.
 
-5. Execute example notebook(s).
+4. Execute example notebook(s).
 
 Please see 'v9.4.4/docs/emc.pdf' for more information. 
 

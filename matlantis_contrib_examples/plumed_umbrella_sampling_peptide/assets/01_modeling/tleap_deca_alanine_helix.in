@@ -1,0 +1,18 @@
+# 1. Load force field
+source leaprc.protein.ff14SB
+
+# 2. Make sequence
+#    ACE: N-ter cap (Acetyl)
+#    NME: C-ter cap (N-methyl)
+mol = sequence { ACE ALA ALA ALA ALA ALA ALA ALA ALA ALA ALA NME }
+
+# 3. Make structure α-helix 構造の適用 (Impose)
+#    Target: residues 2-11 (except for capping residues)
+#    Phi(φ): C-N-CA-C = -57.0 deg.
+#    Psi(ψ): N-CA-C-N = -47.0 deg.
+impose mol { 2 3 4 5 6 7 8 9 10 11 } { { "C" "N" "CA" "C" -57.0 } { "N" "CA" "C" "N" -47.0 } }
+
+# 4. Save parameter files (prmtop & inpcrd)
+saveAmberParm mol ./output/deca_alanine.prmtop ./output/deca_alanine.inpcrd
+
+quit
